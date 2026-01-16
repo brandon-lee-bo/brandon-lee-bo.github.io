@@ -1,29 +1,29 @@
 [site]
-title = "Jiale Liu"
-description = "PhD student at the University of Example."
+title = "Bohan Li"
+description = "Undergraduate student at the South China University of Technology."
 favicon = "/favicon.svg"
 last_updated = "November 18, 2025"
 
 [author]
-name = "Jiale Liu"
-title = "PhD Student"
-institution = "University of Example"
+name = "Bohan Li"
+title = "Undergraduate Student"
+institution = "University of South China University of Technology"
 avatar = "/bio.jpg"
 
 [social]
 # Contact information (leave blank or delete to hide)
 
-email = "john.doe@example.com"
-location = "City, Country"
-location_url = "https://maps.google.com"
+email = "leebrandon@163.com"
+location = "Guangzhou, China"
+location_url = "https://maps.app.goo.gl/BitDBmrk991FQPx16"
 location_details = [
-  "Room 123, Science Building,",
-  "University Avenue, City, Country"
+  "Microelectronic Building,",
+  "Pan yu, Guangzhou, China"
 ]
 google_scholar = "https://scholar.google.com"
 orcid = "https://orcid.org"
-github = "https://github.com"
-linkedin = "https://linkedin.com"
+github = "https://github.com/brandon-lee-bo"
+linkedin = "https://www.linkedin.com/in/bohan-li-548354387/"
 
 [features]
 # Show a like button on the about page

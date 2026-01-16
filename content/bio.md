@@ -1,5 +1,3 @@
-I am a PhD student at the School of Science, University of Example, advised by [Prof. Advisor One](https://example.com) and [Dr. Advisor Two](https://example.com).
+I am a Undergraduate student at the School of Microelectronic, South China University of Technology, advised by [Prof. Simei Yang](https://www2.scut.edu.cn/microelectronics/2020/0910/c25586a578837/page.htm).
 
-Prior to this, I obtained a BSc degree with First Class Honours in Natural Science from the University of Example.
-
-My current research focuses on investigating the mathematical principles of natural philosophy.
+My current research focuses on designing domain-specific vector processors to accelerate sparse-dense matrix multiplication (SpMM) for graph-structured workloads, emphasizing hardware-software co-design for handling irregular access patterns and power-law distributions.
