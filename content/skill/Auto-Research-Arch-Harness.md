@@ -9,7 +9,7 @@ tags: computer-architecture, cpu, idea-discovery, reviewer-simulation, literatur
 
 # Auto Research Arch Harness
 
-This harness is a long-horizon research protocol for computer architecture. It is designed for CPU architects who want to turn paper reading, artifact analysis, idea generation, reviewer-style critique, and experiment planning into a repeatable loop.
+This harness is a long-horizon research protocol for computer architecture. Its primary job is to find the right research direction: search the strongest prior work, identify a real bottleneck, generate ideas with a clear highlight, and judge those ideas before implementation effort is spent.
 
 It is not an executable script. It is a prompt-level operating protocol for days-to-weeks research work. The process is allowed to continue across many iterations until the evidence supports a direction, forces a pivot, or reaches explicit stop conditions.
 
@@ -75,6 +75,7 @@ The main purpose is idea discovery under evidence constraints:
 - close-read the most relevant papers;
 - extract concrete mechanisms rather than broad summaries;
 - generate candidate ideas;
+- require a clear highlight for each idea: new mechanism, new problem framing, better evaluation target, or credible cross-domain method transfer;
 - reject weak ideas quickly;
 - iterate with reviewer-style scoring.
 
@@ -310,57 +311,56 @@ Log line format:
 {"ts":"...", "source":"...", "level":"info|warn|error|decision", "event":"...", "detail":"..."}
 ```
 
-## 6. Candidate Idea Rubric
+## 6. Iteration Definition
 
-Score each idea from 1 to 5 on each axis.
+One iteration is not a chat turn. One iteration must contain:
 
-| Axis | Question |
-| --- | --- |
-| Mechanism fit | Does it explain a bottleneck visible in data? |
-| Necessity | Does the proposed ingredient add something beyond simpler alternatives? |
-| Runtime design | Is the online controller or hardware policy well-defined and lightweight? |
-| Experiment feasibility | Can it be tested in the current simulator soon? |
-| Novelty | Is the boundary with prior work clear? |
-| Performance plausibility | Is there a plausible path to meaningful gain? |
-| Overhead plausibility | Is the hardware/storage/latency cost credible? |
-| Robustness | Does it avoid proxy-only traps and broad untargeted actions? |
-| Reviewer defensibility | Can it survive skeptical architecture reviews? |
-| Evidence traceability | Are key claims backed by papers or local artifacts? |
+1. literature expansion from ISCA, MICRO, HPCA, ASPLOS, plus targeted AI-method venues when relevant;
+2. mechanism extraction from the most relevant papers;
+3. at least two candidate ideas or one explicit reason no viable idea exists;
+4. four-reviewer scoring;
+5. a minimum experiment plan for the strongest idea;
+6. a decision: continue, pivot, or produce the final report.
 
-Decision rule:
+The theme is information gathering and idea judgment. Do not run heavy experiments unless the user explicitly asks. However, every surviving idea must specify what experiments would be needed to support it.
 
-- total >= 34 and no axis below 3: experiment candidate;
-- total 28-33: backup or needs refinement;
-- any of mechanism fit, necessity, or experiment feasibility <= 2: reject or defer.
+## 7. Four-Reviewer Gate
 
-## 7. Reviewer Simulation
+Score each idea from 1 to 10 using four reviewer personas modeled after top architecture review expectations: novelty, significance, soundness, evaluation strength, clear relation to prior work, and reproducibility.
 
-Use four reviewer personas.
-
-1. Systems architect
-   - asks for mechanism clarity, hardware cost, and clean baselines.
-2. Methodology reviewer
-   - attacks confounders, invalid oracles, workload selection, and reproducibility.
-3. Domain specialist
-   - asks whether existing policies already solve the proposed problem.
-4. Skeptical simplifier
-   - asks whether a simpler counter-only, rule-only, or runtime-only method is enough.
+| Reviewer | Rejects when | Accepts when |
+| --- | --- | --- |
+| Novelty and direction reviewer | The idea is incremental, already solved, or lacks a clear highlight. | The paper search shows a real gap and the idea has a memorable contribution. |
+| Architecture mechanism reviewer | The mechanism is vague, too software-only, too expensive, or not tied to a measurable bottleneck. | State, action, hardware/runtime integration, overhead, and multicore behavior are concrete. |
+| Methodology and experiment reviewer | Baselines are weak, metrics are proxy-only, workloads are cherry-picked, or no falsification test exists. | The plan has strong baselines, ablations, target metrics, reproducibility notes, and cheap falsification tests. |
+| Skeptical prior-art reviewer | A simpler counter-only, rule-only, runtime-only, or known architecture policy likely works. | The idea explains why simpler alternatives fail or where the new ingredient is necessary. |
 
 Each reviewer must output:
 
+- score from 1 to 10;
 - strongest accept argument;
 - strongest reject argument;
-- missing experiments;
-- score from 1 to 10;
-- what would raise the score by at least 2 points.
+- missing experiment or missing paper;
+- one action that would raise the score.
+
+Decision rule:
+
+- output a final direction only if every reviewer score is >= 8, no blocking missing baseline remains, and the strongest idea has a concrete experiment plan;
+- continue iterating if any reviewer score is 6-7 and the next action is clear;
+- pivot or reject if any reviewer score is <= 5 after one revision cycle;
+- never output a final report just because the conversation is long. Assume token budget is sufficient unless the user says otherwise.
+
+## 8. Reviewer Simulation
+
+Run the four personas from the Four-Reviewer Gate after each major synthesis.
 
 Reviewer iteration rule:
 
 - After each major synthesis, run a reviewer pass before finalizing.
-- Any idea with average reviewer score below 6/10 must be revised, downgraded, or rejected.
-- Any idea rejected by the skeptical simplifier must add a simpler baseline before it can proceed.
+- Any idea below the Four-Reviewer Gate must be revised, downgraded, or rejected.
+- Any idea rejected by the skeptical prior-art reviewer must add a simpler baseline before it can proceed.
 
-## 8. Anti-Loop Rules
+## 9. Anti-Loop Rules
 
 The agent must not keep tuning within a failing frame.
 
@@ -391,7 +391,7 @@ Forbidden loop:
 
 - keep changing thresholds after the target metric fails to align with performance.
 
-## 9. Multi-Agent Roles
+## 10. Multi-Agent Roles
 
 Do not spawn agents until the task spec is approved.
 
@@ -419,7 +419,7 @@ Each agent must output:
 
 The main agent must synthesize, not merely concatenate, subagent outputs. Contradictions must be resolved explicitly.
 
-## 10. Final Report Template
+## 11. Final Report Template
 
 Default final report paths:
 
@@ -470,7 +470,9 @@ The report must end with exactly one of:
 - `pivot_to_producer_side_control`
 - `stop_due_to_low_headroom`
 
-## 11. Execution Rule
+Do not emit the final report until the Four-Reviewer Gate passes. If it does not pass, emit only an iteration update with the next search targets, missing baselines, and the reason the current idea is not ready.
+
+## 12. Execution Rule
 
 Before starting a long research task, the main agent must present:
 
