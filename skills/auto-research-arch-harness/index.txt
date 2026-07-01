@@ -9,14 +9,14 @@ a:I[9665,[],"OutletBoundary"]
 d:I[4911,[],"AsyncMetadataOutlet"]
 f:I[9665,[],"ViewportBoundary"]
 11:I[6614,[],""]
-:HL["/_next/static/css/3783d0a89b4bed54.css","style"]
-0:{"P":null,"b":"jDTrZamwSX5qAvAh6SYFb","p":"","c":["","skills","auto-research-arch-harness",""],"i":false,"f":[[["",{"children":[["slug","skills","d"],{"children":[["item","auto-research-arch-harness","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/3783d0a89b4bed54.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"scroll-smooth","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"dns-prefetch","href":"https://google-fonts.jialeliu.com"}],["$","link",null,{"rel":"preconnect","href":"https://google-fonts.jialeliu.com","crossOrigin":""}],["$","link",null,{"rel":"preload","as":"style","href":"https://google-fonts.jialeliu.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"}],["$","link",null,{"rel":"stylesheet","id":"gfonts-css","href":"https://google-fonts.jialeliu.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap","media":"print"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              (function(){\n                var l = document.getElementById('gfonts-css');\n                if (!l) return;\n                if (l.media !== 'all') {\n                  l.addEventListener('load', function(){ try { l.media = 'all'; } catch(e){} });\n                }\n              })();\n            "}}],["$","noscript",null,{"children":["$","link",null,{"rel":"stylesheet","href":"https://google-fonts.jialeliu.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"}]}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              try {\n                const theme = localStorage.getItem('theme-storage');\n                const parsed = theme ? JSON.parse(theme) : null;\n                const setting = parsed?.state?.theme || 'system';\n                const prefersDark = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;\n                const effective = setting === 'dark' ? 'dark' : (setting === 'light' ? 'light' : (prefersDark ? 'dark' : 'light'));\n                var root = document.documentElement;\n                root.classList.add(effective);\n                root.setAttribute('data-theme', effective);\n              } catch (e) {\n                var root = document.documentElement;\n                root.classList.add('light');\n                root.setAttribute('data-theme', 'light');\n              }\n            "}}]]}],["$","body",null,{"className":"font-sans antialiased","children":["$","$L2",null,{"children":[["$","$L3",null,{"items":[{"title":"About","type":"page","target":"about","href":"/"},{"title":"Publications","type":"page","target":"publications","href":"/publications"},{"title":"CV","type":"page","target":"cv","href":"/cv"},{"title":"Skill Group","type":"page","target":"skills","href":"/skills"},{"title":"Blog","type":"page","target":"blog","href":"/blog"}],"siteTitle":"Bohan Li","enableOnePageMode":false}],["$","main",null,{"className":"min-h-screen pt-16 lg:pt-20","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$L6",null,{"lastUpdated":"November 18, 2025"}]]}]}]]}]]}],{"children":[["slug","skills","d"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["item","auto-research-arch-harness","d"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",["$","$L8",null,{"children":"$L9"}],null,["$","$La",null,{"children":["$Lb","$Lc",["$","$Ld",null,{"promise":"$@e"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","1A-eG4slEPGXGzG1Ig448",{"children":[["$","$Lf",null,{"children":"$L10"}],null]}],null]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+:HL["/_next/static/css/263e18963496af9e.css","style"]
+0:{"P":null,"b":"Vcm2GQ8tsPyLKca-yQZsk","p":"","c":["","skills","auto-research-arch-harness",""],"i":false,"f":[[["",{"children":[["slug","skills","d"],{"children":[["item","auto-research-arch-harness","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/263e18963496af9e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"scroll-smooth","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"dns-prefetch","href":"https://google-fonts.jialeliu.com"}],["$","link",null,{"rel":"preconnect","href":"https://google-fonts.jialeliu.com","crossOrigin":""}],["$","link",null,{"rel":"preload","as":"style","href":"https://google-fonts.jialeliu.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"}],["$","link",null,{"rel":"stylesheet","id":"gfonts-css","href":"https://google-fonts.jialeliu.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap","media":"print"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              (function(){\n                var l = document.getElementById('gfonts-css');\n                if (!l) return;\n                if (l.media !== 'all') {\n                  l.addEventListener('load', function(){ try { l.media = 'all'; } catch(e){} });\n                }\n              })();\n            "}}],["$","noscript",null,{"children":["$","link",null,{"rel":"stylesheet","href":"https://google-fonts.jialeliu.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"}]}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              try {\n                const theme = localStorage.getItem('theme-storage');\n                const parsed = theme ? JSON.parse(theme) : null;\n                const setting = parsed?.state?.theme || 'system';\n                const prefersDark = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;\n                const effective = setting === 'dark' ? 'dark' : (setting === 'light' ? 'light' : (prefersDark ? 'dark' : 'light'));\n                var root = document.documentElement;\n                root.classList.add(effective);\n                root.setAttribute('data-theme', effective);\n              } catch (e) {\n                var root = document.documentElement;\n                root.classList.add('light');\n                root.setAttribute('data-theme', 'light');\n              }\n            "}}]]}],["$","body",null,{"className":"font-sans antialiased","children":["$","$L2",null,{"children":[["$","$L3",null,{"items":[{"title":"About","type":"page","target":"about","href":"/"},{"title":"Publications","type":"page","target":"publications","href":"/publications"},{"title":"CV","type":"page","target":"cv","href":"/cv"},{"title":"Skill Group","type":"page","target":"skills","href":"/skills"},{"title":"Blog","type":"page","target":"blog","href":"/blog"}],"siteTitle":"Bohan Li","enableOnePageMode":false}],["$","main",null,{"className":"min-h-screen pt-16 lg:pt-20","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$L6",null,{"lastUpdated":"November 18, 2025"}]]}]}]]}]]}],{"children":[["slug","skills","d"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["item","auto-research-arch-harness","d"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",["$","$L8",null,{"children":"$L9"}],null,["$","$La",null,{"children":["$Lb","$Lc",["$","$Ld",null,{"promise":"$@e"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","x4B1RNCVpYH31EH98y-6t",{"children":[["$","$Lf",null,{"children":"$L10"}],null]}],null]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
 12:"$Sreact.suspense"
 13:I[4911,[],"AsyncMetadata"]
 15:I[6874,["589","static/chunks/589-ebc20544f75a14cb.js","486","static/chunks/486-d2ce1eaba6fd711e.js","586","static/chunks/app/%5Bslug%5D/%5Bitem%5D/page-a0a6669e71743a30.js"],""]
 16:I[877,["589","static/chunks/589-ebc20544f75a14cb.js","486","static/chunks/486-d2ce1eaba6fd711e.js","586","static/chunks/app/%5Bslug%5D/%5Bitem%5D/page-a0a6669e71743a30.js"],"default"]
 9:["$","$12",null,{"fallback":null,"children":["$","$L13",null,{"promise":"$@14"}]}]
-17:T3a07,This harness is a long-horizon research protocol for computer architecture. It is designed for CPU architects who want to turn paper reading, artifact analysis, idea generation, reviewer-style critique, and experiment planning into a repeatable loop.
+17:T3f33,This harness is a long-horizon research protocol for computer architecture. Its primary job is to find the right research direction: search the strongest prior work, identify a real bottleneck, generate ideas with a clear highlight, and judge those ideas before implementation effort is spent.
 
 It is not an executable script. It is a prompt-level operating protocol for days-to-weeks research work. The process is allowed to continue across many iterations until the evidence supports a direction, forces a pivot, or reaches explicit stop conditions.
 
@@ -82,6 +82,7 @@ The main purpose is idea discovery under evidence constraints:
 - close-read the most relevant papers;
 - extract concrete mechanisms rather than broad summaries;
 - generate candidate ideas;
+- require a clear highlight for each idea: new mechanism, new problem framing, better evaluation target, or credible cross-domain method transfer;
 - reject weak ideas quickly;
 - iterate with reviewer-style scoring.
 
@@ -317,57 +318,56 @@ Log line format:
 {"ts":"...", "source":"...", "level":"info|warn|error|decision", "event":"...", "detail":"..."}
 ```
 
-## 6. Candidate Idea Rubric
+## 6. Iteration Definition
 
-Score each idea from 1 to 5 on each axis.
+One iteration is not a chat turn. One iteration must contain:
 
-| Axis | Question |
-| --- | --- |
-| Mechanism fit | Does it explain a bottleneck visible in data? |
-| Necessity | Does the proposed ingredient add something beyond simpler alternatives? |
-| Runtime design | Is the online controller or hardware policy well-defined and lightweight? |
-| Experiment feasibility | Can it be tested in the current simulator soon? |
-| Novelty | Is the boundary with prior work clear? |
-| Performance plausibility | Is there a plausible path to meaningful gain? |
-| Overhead plausibility | Is the hardware/storage/latency cost credible? |
-| Robustness | Does it avoid proxy-only traps and broad untargeted actions? |
-| Reviewer defensibility | Can it survive skeptical architecture reviews? |
-| Evidence traceability | Are key claims backed by papers or local artifacts? |
+1. literature expansion from ISCA, MICRO, HPCA, ASPLOS, plus targeted AI-method venues when relevant;
+2. mechanism extraction from the most relevant papers;
+3. at least two candidate ideas or one explicit reason no viable idea exists;
+4. four-reviewer scoring;
+5. a minimum experiment plan for the strongest idea;
+6. a decision: continue, pivot, or produce the final report.
 
-Decision rule:
+The theme is information gathering and idea judgment. Do not run heavy experiments unless the user explicitly asks. However, every surviving idea must specify what experiments would be needed to support it.
 
-- total >= 34 and no axis below 3: experiment candidate;
-- total 28-33: backup or needs refinement;
-- any of mechanism fit, necessity, or experiment feasibility <= 2: reject or defer.
+## 7. Four-Reviewer Gate
 
-## 7. Reviewer Simulation
+Score each idea from 1 to 10 using four reviewer personas modeled after top architecture review expectations: novelty, significance, soundness, evaluation strength, clear relation to prior work, and reproducibility.
 
-Use four reviewer personas.
-
-1. Systems architect
-   - asks for mechanism clarity, hardware cost, and clean baselines.
-2. Methodology reviewer
-   - attacks confounders, invalid oracles, workload selection, and reproducibility.
-3. Domain specialist
-   - asks whether existing policies already solve the proposed problem.
-4. Skeptical simplifier
-   - asks whether a simpler counter-only, rule-only, or runtime-only method is enough.
+| Reviewer | Rejects when | Accepts when |
+| --- | --- | --- |
+| Novelty and direction reviewer | The idea is incremental, already solved, or lacks a clear highlight. | The paper search shows a real gap and the idea has a memorable contribution. |
+| Architecture mechanism reviewer | The mechanism is vague, too software-only, too expensive, or not tied to a measurable bottleneck. | State, action, hardware/runtime integration, overhead, and multicore behavior are concrete. |
+| Methodology and experiment reviewer | Baselines are weak, metrics are proxy-only, workloads are cherry-picked, or no falsification test exists. | The plan has strong baselines, ablations, target metrics, reproducibility notes, and cheap falsification tests. |
+| Skeptical prior-art reviewer | A simpler counter-only, rule-only, runtime-only, or known architecture policy likely works. | The idea explains why simpler alternatives fail or where the new ingredient is necessary. |
 
 Each reviewer must output:
 
+- score from 1 to 10;
 - strongest accept argument;
 - strongest reject argument;
-- missing experiments;
-- score from 1 to 10;
-- what would raise the score by at least 2 points.
+- missing experiment or missing paper;
+- one action that would raise the score.
+
+Decision rule:
+
+- output a final direction only if every reviewer score is >= 8, no blocking missing baseline remains, and the strongest idea has a concrete experiment plan;
+- continue iterating if any reviewer score is 6-7 and the next action is clear;
+- pivot or reject if any reviewer score is <= 5 after one revision cycle;
+- never output a final report just because the conversation is long. Assume token budget is sufficient unless the user says otherwise.
+
+## 8. Reviewer Simulation
+
+Run the four personas from the Four-Reviewer Gate after each major synthesis.
 
 Reviewer iteration rule:
 
 - After each major synthesis, run a reviewer pass before finalizing.
-- Any idea with average reviewer score below 6/10 must be revised, downgraded, or rejected.
-- Any idea rejected by the skeptical simplifier must add a simpler baseline before it can proceed.
+- Any idea below the Four-Reviewer Gate must be revised, downgraded, or rejected.
+- Any idea rejected by the skeptical prior-art reviewer must add a simpler baseline before it can proceed.
 
-## 8. Anti-Loop Rules
+## 9. Anti-Loop Rules
 
 The agent must not keep tuning within a failing frame.
 
@@ -398,7 +398,7 @@ Forbidden loop:
 
 - keep changing thresholds after the target metric fails to align with performance.
 
-## 9. Multi-Agent Roles
+## 10. Multi-Agent Roles
 
 Do not spawn agents until the task spec is approved.
 
@@ -426,7 +426,7 @@ Each agent must output:
 
 The main agent must synthesize, not merely concatenate, subagent outputs. Contradictions must be resolved explicitly.
 
-## 10. Final Report Template
+## 11. Final Report Template
 
 Default final report paths:
 
@@ -477,7 +477,9 @@ The report must end with exactly one of:
 - `pivot_to_producer_side_control`
 - `stop_due_to_low_headroom`
 
-## 11. Execution Rule
+Do not emit the final report until the Four-Reviewer Gate passes. If it does not pass, emit only an iteration update with the next search targets, missing baselines, and the reason the current idea is not ready.
+
+## 12. Execution Rule
 
 Before starting a long research task, the main agent must present:
 
@@ -488,7 +490,7 @@ Before starting a long research task, the main agent must present:
 - stop conditions.
 
 The user must approve before subagents are spawned.
-18:T3bc7,---
+18:T40f3,---
 title: Auto Research Arch Harness
 description: A days-to-weeks research harness for computer architecture idea discovery, skeptical reviewer simulation, and iterative experiment planning.
 type: Research Protocol
@@ -499,7 +501,7 @@ tags: computer-architecture, cpu, idea-discovery, reviewer-simulation, literatur
 
 # Auto Research Arch Harness
 
-This harness is a long-horizon research protocol for computer architecture. It is designed for CPU architects who want to turn paper reading, artifact analysis, idea generation, reviewer-style critique, and experiment planning into a repeatable loop.
+This harness is a long-horizon research protocol for computer architecture. Its primary job is to find the right research direction: search the strongest prior work, identify a real bottleneck, generate ideas with a clear highlight, and judge those ideas before implementation effort is spent.
 
 It is not an executable script. It is a prompt-level operating protocol for days-to-weeks research work. The process is allowed to continue across many iterations until the evidence supports a direction, forces a pivot, or reaches explicit stop conditions.
 
@@ -565,6 +567,7 @@ The main purpose is idea discovery under evidence constraints:
 - close-read the most relevant papers;
 - extract concrete mechanisms rather than broad summaries;
 - generate candidate ideas;
+- require a clear highlight for each idea: new mechanism, new problem framing, better evaluation target, or credible cross-domain method transfer;
 - reject weak ideas quickly;
 - iterate with reviewer-style scoring.
 
@@ -800,57 +803,56 @@ Log line format:
 {"ts":"...", "source":"...", "level":"info|warn|error|decision", "event":"...", "detail":"..."}
 ```
 
-## 6. Candidate Idea Rubric
+## 6. Iteration Definition
 
-Score each idea from 1 to 5 on each axis.
+One iteration is not a chat turn. One iteration must contain:
 
-| Axis | Question |
-| --- | --- |
-| Mechanism fit | Does it explain a bottleneck visible in data? |
-| Necessity | Does the proposed ingredient add something beyond simpler alternatives? |
-| Runtime design | Is the online controller or hardware policy well-defined and lightweight? |
-| Experiment feasibility | Can it be tested in the current simulator soon? |
-| Novelty | Is the boundary with prior work clear? |
-| Performance plausibility | Is there a plausible path to meaningful gain? |
-| Overhead plausibility | Is the hardware/storage/latency cost credible? |
-| Robustness | Does it avoid proxy-only traps and broad untargeted actions? |
-| Reviewer defensibility | Can it survive skeptical architecture reviews? |
-| Evidence traceability | Are key claims backed by papers or local artifacts? |
+1. literature expansion from ISCA, MICRO, HPCA, ASPLOS, plus targeted AI-method venues when relevant;
+2. mechanism extraction from the most relevant papers;
+3. at least two candidate ideas or one explicit reason no viable idea exists;
+4. four-reviewer scoring;
+5. a minimum experiment plan for the strongest idea;
+6. a decision: continue, pivot, or produce the final report.
 
-Decision rule:
+The theme is information gathering and idea judgment. Do not run heavy experiments unless the user explicitly asks. However, every surviving idea must specify what experiments would be needed to support it.
 
-- total >= 34 and no axis below 3: experiment candidate;
-- total 28-33: backup or needs refinement;
-- any of mechanism fit, necessity, or experiment feasibility <= 2: reject or defer.
+## 7. Four-Reviewer Gate
 
-## 7. Reviewer Simulation
+Score each idea from 1 to 10 using four reviewer personas modeled after top architecture review expectations: novelty, significance, soundness, evaluation strength, clear relation to prior work, and reproducibility.
 
-Use four reviewer personas.
-
-1. Systems architect
-   - asks for mechanism clarity, hardware cost, and clean baselines.
-2. Methodology reviewer
-   - attacks confounders, invalid oracles, workload selection, and reproducibility.
-3. Domain specialist
-   - asks whether existing policies already solve the proposed problem.
-4. Skeptical simplifier
-   - asks whether a simpler counter-only, rule-only, or runtime-only method is enough.
+| Reviewer | Rejects when | Accepts when |
+| --- | --- | --- |
+| Novelty and direction reviewer | The idea is incremental, already solved, or lacks a clear highlight. | The paper search shows a real gap and the idea has a memorable contribution. |
+| Architecture mechanism reviewer | The mechanism is vague, too software-only, too expensive, or not tied to a measurable bottleneck. | State, action, hardware/runtime integration, overhead, and multicore behavior are concrete. |
+| Methodology and experiment reviewer | Baselines are weak, metrics are proxy-only, workloads are cherry-picked, or no falsification test exists. | The plan has strong baselines, ablations, target metrics, reproducibility notes, and cheap falsification tests. |
+| Skeptical prior-art reviewer | A simpler counter-only, rule-only, runtime-only, or known architecture policy likely works. | The idea explains why simpler alternatives fail or where the new ingredient is necessary. |
 
 Each reviewer must output:
 
+- score from 1 to 10;
 - strongest accept argument;
 - strongest reject argument;
-- missing experiments;
-- score from 1 to 10;
-- what would raise the score by at least 2 points.
+- missing experiment or missing paper;
+- one action that would raise the score.
+
+Decision rule:
+
+- output a final direction only if every reviewer score is >= 8, no blocking missing baseline remains, and the strongest idea has a concrete experiment plan;
+- continue iterating if any reviewer score is 6-7 and the next action is clear;
+- pivot or reject if any reviewer score is <= 5 after one revision cycle;
+- never output a final report just because the conversation is long. Assume token budget is sufficient unless the user says otherwise.
+
+## 8. Reviewer Simulation
+
+Run the four personas from the Four-Reviewer Gate after each major synthesis.
 
 Reviewer iteration rule:
 
 - After each major synthesis, run a reviewer pass before finalizing.
-- Any idea with average reviewer score below 6/10 must be revised, downgraded, or rejected.
-- Any idea rejected by the skeptical simplifier must add a simpler baseline before it can proceed.
+- Any idea below the Four-Reviewer Gate must be revised, downgraded, or rejected.
+- Any idea rejected by the skeptical prior-art reviewer must add a simpler baseline before it can proceed.
 
-## 8. Anti-Loop Rules
+## 9. Anti-Loop Rules
 
 The agent must not keep tuning within a failing frame.
 
@@ -881,7 +883,7 @@ Forbidden loop:
 
 - keep changing thresholds after the target metric fails to align with performance.
 
-## 9. Multi-Agent Roles
+## 10. Multi-Agent Roles
 
 Do not spawn agents until the task spec is approved.
 
@@ -909,7 +911,7 @@ Each agent must output:
 
 The main agent must synthesize, not merely concatenate, subagent outputs. Contradictions must be resolved explicitly.
 
-## 10. Final Report Template
+## 11. Final Report Template
 
 Default final report paths:
 
@@ -960,7 +962,9 @@ The report must end with exactly one of:
 - `pivot_to_producer_side_control`
 - `stop_due_to_low_headroom`
 
-## 11. Execution Rule
+Do not emit the final report until the Four-Reviewer Gate passes. If it does not pass, emit only an iteration update with the next search targets, missing baselines, and the reason the current idea is not ready.
+
+## 12. Execution Rule
 
 Before starting a long research task, the main agent must present:
 
