@@ -194,23 +194,10 @@ export default function PublicationsList({ config, publications, embedded = fals
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.4, delay: 0.1 * index }}
-                            className="bg-white dark:bg-neutral-900 p-6 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-800 hover:shadow-md transition-all duration-200"
+                            className="bg-white dark:bg-neutral-900 p-5 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-800 hover:shadow-md transition-all duration-200"
                         >
-                            <div className="flex flex-col md:flex-row gap-6">
-                                {pub.preview && (
-                                    <div className="w-full md:w-48 flex-shrink-0">
-                                        <div className="aspect-video md:aspect-[4/3] relative rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800">
-                                            <Image
-                                                src={`/papers/${pub.preview}`}
-                                                alt={pub.title}
-                                                fill
-                                                className="object-cover"
-                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                            />
-                                        </div>
-                                    </div>
-                                )}
-                                <div className="flex-grow">
+                            <div className={cn("grid gap-5", pub.preview ? "lg:grid-cols-[minmax(0,1fr)_300px]" : "")}>
+                                <div className="min-w-0">
                                     <h3 className={`${embedded ? "text-lg" : "text-xl"} font-semibold text-primary mb-2 leading-tight`}>
                                         {pub.title}
                                     </h3>
@@ -331,6 +318,19 @@ export default function PublicationsList({ config, publications, embedded = fals
                                         ) : null}
                                     </AnimatePresence>
                                 </div>
+                                {pub.preview && (
+                                    <div className="lg:order-last">
+                                        <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-neutral-200 bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-800">
+                                            <Image
+                                                src={`/papers/${pub.preview}`}
+                                                alt={pub.title}
+                                                fill
+                                                className="object-cover"
+                                                sizes="(max-width: 1024px) 100vw, 300px"
+                                            />
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         </motion.div>
                     ))

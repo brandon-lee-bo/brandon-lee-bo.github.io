@@ -11,10 +11,6 @@ $skill-installer install https://github.com/brandon-lee-bo/brandon-lee-bo.github
 Use:
 $arch-idea-reviewer Generate ideas based on this repo and review them in a skeptical reviewer style.
 
-Available directories:
-skills/arch-idea-reviewer
-skills/deploy-private-proxy-vps
-
 To install another skill, replace arch-idea-reviewer in the URL with the target directory name.
 """
 directory = "skill"

@@ -44,15 +44,11 @@ function frontmatterValue(content: string, key: string): string {
     return '';
 }
 
-function skillMarkdownContent(content: string, rawContent: string, title: string): string {
+function officialSkillContent(content: string, rawContent: string, title: string): string {
     const name = frontmatterValue(rawContent, 'name') || title;
     const description = frontmatterValue(rawContent, 'description');
-    const header = [
-        `name: ${name}`,
-        description ? `description: ${description}` : '',
-    ].filter(Boolean).join('  \n');
 
-    return `${header}\n\n${removeDuplicateTitle(content, title)}`;
+    return `---\nname: ${name}\ndescription: ${description}\n---\n\n${removeDuplicateTitle(content, title)}`;
 }
 
 export function generateStaticParams() {
@@ -112,8 +108,10 @@ export default async function CollectionItemPage({ params }: { params: Promise<{
                     </header>
                     <SkillBodyPanel
                         config={pageConfig}
-                        content={skillMarkdownContent(entry.content, entry.rawContent, entry.title)}
-                        rawContent={entry.rawContent}
+                        content={removeDuplicateTitle(entry.content, entry.title)}
+                        rawContent={officialSkillContent(entry.content, entry.rawContent, entry.title)}
+                        skillName={frontmatterValue(entry.rawContent, 'name') || entry.title}
+                        skillDescription={frontmatterValue(entry.rawContent, 'description')}
                     />
                 </article>
             ) : (

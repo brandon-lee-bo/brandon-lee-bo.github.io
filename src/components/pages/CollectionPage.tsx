@@ -40,6 +40,41 @@ function CollectionVisual({ item }: { item: CollectionItem }) {
     );
 }
 
+function InstallGuide({ value }: { value: string }) {
+    const lines = value.trim().split('\n');
+
+    return (
+        <div className="mt-10 rounded-lg border border-neutral-200 bg-neutral-50 p-4 dark:border-neutral-800 dark:bg-neutral-900">
+            <pre className="overflow-x-auto font-mono text-xs leading-snug">
+                <code>
+                    {lines.map((line, index) => {
+                        const isLabel = line.endsWith(':');
+                        const isCommand = line.startsWith('$');
+                        const isUrl = line.startsWith('https://');
+                        return (
+                            <span
+                                key={`${line}-${index}`}
+                                className={
+                                    isLabel
+                                        ? "font-semibold text-accent"
+                                        : isCommand
+                                            ? "text-emerald-700 dark:text-emerald-300"
+                                            : isUrl
+                                                ? "text-blue-700 dark:text-blue-300"
+                                                : "text-neutral-700 dark:text-neutral-300"
+                                }
+                            >
+                                {line || ' '}
+                                {index < lines.length - 1 ? '\n' : ''}
+                            </span>
+                        );
+                    })}
+                </code>
+            </pre>
+        </div>
+    );
+}
+
 export default function CollectionPage({ config, items }: { config: CollectionPageConfig; items: CollectionItem[] }) {
     return (
         <div>
@@ -49,11 +84,6 @@ export default function CollectionPage({ config, items }: { config: CollectionPa
                     <p className="text-lg text-neutral-600 dark:text-neutral-500 max-w-2xl">
                         {config.description}
                     </p>
-                )}
-                {config.install_guide && (
-                    <pre className="mt-4 max-w-3xl overflow-x-auto rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 font-mono text-xs leading-snug text-neutral-700 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-300">
-                        <code>{config.install_guide.trim()}</code>
-                    </pre>
                 )}
             </div>
 
@@ -112,6 +142,8 @@ export default function CollectionPage({ config, items }: { config: CollectionPa
                     ))}
                 </div>
             )}
+
+            {config.install_guide && <InstallGuide value={config.install_guide} />}
         </div>
     );
 }

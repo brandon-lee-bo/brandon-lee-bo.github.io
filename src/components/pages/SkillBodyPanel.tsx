@@ -9,10 +9,14 @@ export default function SkillBodyPanel({
     config,
     content,
     rawContent,
+    skillName,
+    skillDescription,
 }: {
     config: TextPageConfig;
     content: string;
     rawContent: string;
+    skillName?: string;
+    skillDescription?: string;
 }) {
     const [expanded, setExpanded] = useState(false);
 
@@ -33,6 +37,22 @@ export default function SkillBodyPanel({
 
             {expanded ? (
                 <div className="p-4 sm:p-5">
+                    {(skillName || skillDescription) && (
+                        <div className="mb-5 rounded-lg border border-accent/20 bg-accent/5 p-3 font-mono text-xs leading-relaxed">
+                            {skillName && (
+                                <div>
+                                    <span className="font-semibold text-accent">name:</span>{' '}
+                                    <span className="text-neutral-800 dark:text-neutral-200">{skillName}</span>
+                                </div>
+                            )}
+                            {skillDescription && (
+                                <div>
+                                    <span className="font-semibold text-accent">description:</span>{' '}
+                                    <span className="text-neutral-700 dark:text-neutral-300">{skillDescription}</span>
+                                </div>
+                            )}
+                        </div>
+                    )}
                     <TextPage config={config} content={content} compact />
                 </div>
             ) : (
