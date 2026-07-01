@@ -2,13 +2,22 @@
 
 ## Project Shape
 
-This is a Next.js static-export personal website. Source content lives in `content/`; generated static output lives in `out/` and should not be committed.
+This is a Next.js static-export personal website for Brandon/Bohan. The repo is checked out at `/home/bohan/person_page`.
+
+Important paths:
+
+- `content/` contains editable site content.
+- `src/` contains the Next.js app and reusable components.
+- `public/` contains committed static assets.
+- `skills/` contains installable Codex skills.
+- `out/` is generated static output and should not be committed to the `source` branch.
 
 Use:
 
 - `npm run build` to verify static export.
-- `npm run deploy` only after the user approves publishing.
 - Static local preview from `out/` when possible, because it matches GitHub Pages better than `next dev`.
+- For interactive UI debugging, run a local static server against `out/` after `npm run build`.
+- Do not use `next dev` as the final validation for GitHub Pages behavior.
 
 ## Content Rules
 
@@ -22,6 +31,10 @@ Top-level pages:
 - `Blog`
 
 Avoid reintroducing separate `Awards`, `Teaching`, or `Services` pages unless the user explicitly asks. Awards already appear in the CV.
+
+Home/about wording matters. The About page should say "I am an undergraduate student" when referring to the user's current status.
+
+CV content comes from the user's Overleaf CV source when requested. Preserve the visual/semantic effect of the CV rather than dumping raw LaTeX.
 
 ## Skill Group Rules
 
@@ -83,13 +96,71 @@ Rules for installable skills:
 
 The Skill Group install guide lives in `content/skills.toml` and should stay at the bottom of the page. It should include:
 
-- GitHub skill directory URL on the `source` branch.
+- GitHub skill directory URL on the `source` branch. The displayed directory should be the shared folder:
+  `https://github.com/brandon-lee-bo/brandon-lee-bo.github.io/tree/source/skills`.
 - `$skill-installer install ...` command.
 - A reminder to restart Codex after installing.
 - `$skill-name ...` usage example.
 - A short note that users can replace the directory name in the URL to install another skill.
 
 For this machine, oh-my-codex may install into `$CODEX_HOME` while workflow discovery reads `~/.codex/skills`. If a newly installed `$skill-name` does not appear after restart, add a symlink from `~/.codex/skills/<skill-name>` to the installed skill directory and then restart Codex.
+
+Current installable skills:
+
+- `arch-idea-reviewer`
+- `deploy-private-proxy-vps`
+
+Current URL pattern:
+
+```bash
+$skill-installer install https://github.com/brandon-lee-bo/brandon-lee-bo.github.io/tree/source/skills/<skill-name>
+```
+
+Known local symlink fix example:
+
+```bash
+ln -s /home/bohan/.codex-local/skills/arch-idea-reviewer /home/bohan/.codex/skills/arch-idea-reviewer
+```
+
+## Skill Page UI Rules
+
+- Skill detail pages show human-friendly website copy, but the copy/download behavior must produce an official installable `SKILL.md`.
+- The expanded skill panel may color `name:` and `description:` labels for readability.
+- UI coloring must never be inserted into `skills/<skill-name>/SKILL.md`.
+- Subheadings in rendered skill pages can be visually polished, but copied skill content must remain plain Markdown.
+- Do not add "Available directories" to the install box. Use the shared GitHub skill directory URL and explain that users replace the directory name in the install command.
+
+When adding a new skill:
+
+1. Choose a lowercase hyphenated skill name.
+2. Add `skills/<skill-name>/SKILL.md` with official frontmatter.
+3. Add or update `content/skill/<descriptive-file>.md` with website metadata and public-facing content.
+4. Make the website `title` exactly match the skill name.
+5. Keep human-only vendor/subscription notes in the website content, not in installable `SKILL.md`.
+6. Run `quick_validate.py`.
+7. Smoke-test installation from the GitHub URL after pushing to `source`, or from the local tree before pushing if only validating file format.
+
+## Publications Rules
+
+Publications are defined in `content/publications.bib` and rendered by `src/components/publications/PublicationsList.tsx`.
+
+For each publication:
+
+- Keep the text/content on the left and the figure on the right for desktop layouts.
+- Current preferred card ratio is left 60% / right 40%, implemented with `lg:grid-cols-[minmax(0,3fr)_minmax(280px,2fr)]`.
+- Use a single clear figure on the right. Avoid combining multiple figures into one preview if it makes the result hard to read.
+- For FlexVector, use the single-column ablation figure from the paper source as `public/papers/flexvector-preview.png`.
+- Right-side figures should be large enough to fill their area, but not cropped. Use `object-contain` unless the user explicitly asks for a cropped thumbnail.
+- Prefer source paper figures or arXiv/source assets over generic stock images.
+- If adding an external PDF link, store it as `pdfUrl` in `content/publications.bib`.
+- Show a `PDF` button before `Abstract` and `BibTeX`.
+- Exclude website-only fields such as `preview`, `description`, `code`, and `pdfUrl` from reconstructed BibTeX output.
+
+Current FlexVector PDF link:
+
+```text
+https://arxiv.org/pdf/2604.10113
+```
 
 ## Blog Rules
 
@@ -121,23 +192,67 @@ For project-bound generated images:
 - Copy final selected generated images into `public/skills/` or another appropriate `public/` subdirectory.
 - Never reference assets directly from Codex's generated image cache.
 - Do not overwrite an existing asset unless the user explicitly asks.
+- Publication figures should live under `public/papers/`.
+- For paper figures, keep enough resolution for retina screens but avoid huge files. Around 80-300 KB is usually enough for a card preview.
+- If extracting from PDFs, render with PyMuPDF (`fitz`) or another deterministic local tool and visually inspect the result.
+
+## UI Style Rules
+
+- The site should feel like a clean academic personal page, not a marketing landing page.
+- Keep cards compact and readable.
+- Avoid adding Teaching or Services navigation pages unless explicitly requested.
+- Avoid decorative clutter. Use assets only when they clarify the research, skill, or page content.
+- On publication cards, prioritize scanning: title, authors, venue/year, short description, then action buttons.
+- Buttons should remain short and consistent: `PDF`, `Abstract`, `BibTeX`, `Code`, `DOI`.
+- Make sure mobile layouts stack cleanly and text does not overflow cards.
 
 ## Git and Deployment
 
 Source branch is `source`.
 
-Deployment branch is `main`, populated by `npm run deploy` from `out/`.
+Deployment branch is `main`, populated from `out/`.
 
 Workflow:
 
 1. Make edits on `source`.
 2. Run `npm run build`.
-3. Give the user the local preview URL and summarize changes.
-4. Commit and push only after the user approves.
-5. Run `npm run deploy` only after approval to publish.
+3. Check relevant generated HTML in `out/` with targeted `grep` where useful.
+4. If the user asked to push/publish, commit to `source`, push `source`, then publish `out/` to `main`.
+5. If the user did not explicitly ask to push, summarize changes and ask before publishing unless the prior turn context clearly requested direct push.
+
+Reliable publish workflow, used when `npm run deploy` is unreliable:
+
+```bash
+rm -rf /tmp/person_page_main_deploy
+git fetch origin main:refs/remotes/origin/main
+git worktree prune
+git worktree add --detach /tmp/person_page_main_deploy origin/main
+find /tmp/person_page_main_deploy -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+cp -a out/. /tmp/person_page_main_deploy/
+git -C /tmp/person_page_main_deploy add -A
+git -C /tmp/person_page_main_deploy commit -m "Deploy site"
+GIT_SSH_COMMAND='ssh -o BatchMode=yes -o ConnectTimeout=10' git -C /tmp/person_page_main_deploy push origin HEAD:main
+git worktree remove /tmp/person_page_main_deploy --force
+git worktree prune
+```
+
+Use batch SSH for pushes when normal SSH appears to hang:
+
+```bash
+GIT_SSH_COMMAND='ssh -o BatchMode=yes -o ConnectTimeout=10' git push origin source
+```
+
+Typical final report should include:
+
+- What changed.
+- What validation ran, especially `npm run build`.
+- Source commit hash.
+- Main/deploy commit hash if published.
 
 ## Safety
 
 - Never commit secrets, local tokens, private keys, API keys, IP addresses, or one-off credentials.
 - Treat VPS/proxy configuration examples as sensitive. Use placeholders in public files.
 - Do not run destructive git commands such as `reset --hard` unless the user explicitly asks.
+- Do not commit `out/` to `source`.
+- Do not commit local Overleaf tokens, GitHub tokens, VPS credentials, raw `.codex` session data, or machine-specific generated caches.
