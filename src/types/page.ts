@@ -31,6 +31,7 @@ export interface CardPageConfig extends BasePageConfig {
 
 export interface CollectionPageConfig extends BasePageConfig {
     type: 'collection';
+    install_guide?: string;
     directory: string;
     basePath: string;
 }

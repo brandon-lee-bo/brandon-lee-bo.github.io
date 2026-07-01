@@ -50,6 +50,11 @@ export default function CollectionPage({ config, items }: { config: CollectionPa
                         {config.description}
                     </p>
                 )}
+                {config.install_guide && (
+                    <pre className="mt-4 max-w-3xl overflow-x-auto rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 font-mono text-xs leading-snug text-neutral-700 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-300">
+                        <code>{config.install_guide.trim()}</code>
+                    </pre>
+                )}
             </div>
 
             {items.length === 0 ? (
