@@ -1,0 +1,5 @@
+type = "collection"
+title = "Blog"
+description = "Notes, reflections, and occasional life updates."
+directory = "blog"
+basePath = "/blog"

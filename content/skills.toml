@@ -1,0 +1,5 @@
+type = "collection"
+title = "Skill Group"
+description = "Reusable skills grouped by research workflows, agent operations, and practical tooling."
+directory = "skill"
+basePath = "/skills"

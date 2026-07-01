@@ -45,13 +45,19 @@ target = "publications"
 href = "/publications"
 
 [[navigation]]
-title = "Awards"
-type = "page"
-target = "awards"
-href = "/awards"
-
-[[navigation]]
 title = "CV"
 type = "page"
 target = "cv"
 href = "/cv"
+
+[[navigation]]
+title = "Skill Group"
+type = "page"
+target = "skills"
+href = "/skills"
+
+[[navigation]]
+title = "Blog"
+type = "page"
+target = "blog"
+href = "/blog"
