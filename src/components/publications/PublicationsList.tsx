@@ -196,7 +196,7 @@ export default function PublicationsList({ config, publications, embedded = fals
                             transition={{ duration: 0.4, delay: 0.1 * index }}
                             className="bg-white dark:bg-neutral-900 p-5 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-800 hover:shadow-md transition-all duration-200"
                         >
-                            <div className={cn("grid gap-5", pub.preview ? "lg:grid-cols-[minmax(0,1fr)_300px]" : "")}>
+                            <div className={cn("grid gap-5", pub.preview ? "lg:grid-cols-[minmax(0,1fr)_340px]" : "")}>
                                 <div className="min-w-0">
                                     <h3 className={`${embedded ? "text-lg" : "text-xl"} font-semibold text-primary mb-2 leading-tight`}>
                                         {pub.title}
@@ -320,13 +320,13 @@ export default function PublicationsList({ config, publications, embedded = fals
                                 </div>
                                 {pub.preview && (
                                     <div className="lg:order-last">
-                                        <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-neutral-200 bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-800">
+                                        <div className="relative aspect-[16/9] overflow-hidden rounded-lg border border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950">
                                             <Image
                                                 src={`/papers/${pub.preview}`}
                                                 alt={pub.title}
                                                 fill
-                                                className="object-cover"
-                                                sizes="(max-width: 1024px) 100vw, 300px"
+                                                className="object-contain p-2"
+                                                sizes="(max-width: 1024px) 100vw, 340px"
                                             />
                                         </div>
                                     </div>

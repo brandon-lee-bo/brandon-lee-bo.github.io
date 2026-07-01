@@ -25,14 +25,20 @@ Avoid reintroducing separate `Awards`, `Teaching`, or `Services` pages unless th
 
 ## Skill Group Rules
 
-Skill entries live under `content/skill/*.md`.
+Skill entries have two synchronized sources:
 
-Each skill should use YAML frontmatter:
+- Public website pages live under `content/skill/*.md`.
+- Installable Codex skills live under `skills/<skill-name>/SKILL.md`.
+
+When the user asks to add or update a skill, update both locations unless they explicitly ask for only one.
+
+Website skill pages should use YAML frontmatter:
 
 ```yaml
 ---
+name: exact-skill-name
+description: One concise sentence explaining exactly when this skill should trigger.
 title: Clear Skill Title
-description: One concise sentence explaining what the skill helps accomplish.
 type: Research Protocol
 category: Research
 image: /skills/example.png
@@ -44,13 +50,46 @@ Rules:
 
 - `/skills/` is a collection page, not a single Markdown page.
 - Every skill Markdown file becomes a card on `/skills/` and a detail page at `/skills/<slug>/`.
+- The detail page H1/title should be the exact installable skill name, including hyphens.
 - Use `category` to group cards. Current categories include `Research` and `Practical`.
 - Keep public skill content generic. Do not include private project names, private paths, tokens, IP addresses, passwords, UUIDs, or unpublished data.
 - If a skill originated from a private project, rewrite project-specific details into reusable templates or examples.
-- The detail page should show a short introduction first, then the full Markdown inside a compact bordered panel.
-- The `Copy Skill` button should copy the full raw Markdown, including frontmatter.
+- The detail page should show a short introduction first, then the full skill instructions inside a compact bordered panel.
+- The `Copy Skill` button should copy an installable official SKILL.md body, not website-only frontmatter fields.
 - Prefer a relevant bitmap thumbnail for each skill. Put generated or curated images under `public/skills/` and reference them with `/skills/<file>.png`.
 - If no image is available, the collection page will show an automatic graphic fallback.
+
+Installable skill directories must follow the official Codex skill format:
+
+```markdown
+---
+name: skill-name
+description: Explain exactly when this skill should and should not trigger.
+---
+
+Skill instructions for Codex to follow.
+```
+
+Rules for installable skills:
+
+- Folder name, `name`, website `title`, and detail page title should all match the exact skill name.
+- Use lowercase letters, digits, and hyphens only for skill names.
+- Keep YAML frontmatter to only `name` and `description`.
+- Put only AI-usable operational instructions in `SKILL.md`.
+- Do not put CSS, color markup, website presentation notes, subscription landing-page text, or human-only explanations in `SKILL.md`.
+- Human-facing notes, such as subscription/vendor links, belong in `content/skill/*.md` or page copy, not in installable skill instructions unless the AI needs them to perform the task.
+- Validate each installable skill with `/home/bohan/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/<skill-name>`.
+- Smoke-test public installation with `/home/bohan/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py --url https://github.com/brandon-lee-bo/brandon-lee-bo.github.io/tree/source/skills/<skill-name> --dest /tmp/<clean-test-dir>`.
+
+The Skill Group install guide lives in `content/skills.toml` and should stay at the bottom of the page. It should include:
+
+- GitHub skill directory URL on the `source` branch.
+- `$skill-installer install ...` command.
+- A reminder to restart Codex after installing.
+- `$skill-name ...` usage example.
+- A short note that users can replace the directory name in the URL to install another skill.
+
+For this machine, oh-my-codex may install into `$CODEX_HOME` while workflow discovery reads `~/.codex/skills`. If a newly installed `$skill-name` does not appear after restart, add a symlink from `~/.codex/skills/<skill-name>` to the installed skill directory and then restart Codex.
 
 ## Blog Rules
 

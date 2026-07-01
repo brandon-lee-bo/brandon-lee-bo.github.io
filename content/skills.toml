@@ -8,7 +8,9 @@ https://github.com/brandon-lee-bo/brandon-lee-bo.github.io/tree/source/skills/ar
 Install in Codex CLI:
 $skill-installer install https://github.com/brandon-lee-bo/brandon-lee-bo.github.io/tree/source/skills/arch-idea-reviewer
 
-Use:
+Restart Codex after installing.
+
+Use after restart:
 $arch-idea-reviewer Generate ideas based on this repo and review them in a skeptical reviewer style.
 
 To install another skill, replace arch-idea-reviewer in the URL with the target directory name.
