@@ -30,6 +30,31 @@ function removeDuplicateTitle(content: string, title: string): string {
     return content.replace(new RegExp(`^#\\s+${escaped}\\s*\\n+`, 'i'), '');
 }
 
+function frontmatterValue(content: string, key: string): string {
+    const match = content.match(/^---\s*\n([\s\S]*?)\n---\s*\n?/);
+    if (!match) return '';
+
+    for (const line of match[1].split('\n')) {
+        const separator = line.indexOf(':');
+        if (separator === -1) continue;
+        if (line.slice(0, separator).trim() !== key) continue;
+        return line.slice(separator + 1).trim().replace(/^["']|["']$/g, '');
+    }
+
+    return '';
+}
+
+function skillMarkdownContent(content: string, rawContent: string, title: string): string {
+    const name = frontmatterValue(rawContent, 'name') || title;
+    const description = frontmatterValue(rawContent, 'description');
+    const header = [
+        `name: ${name}`,
+        description ? `description: ${description}` : '',
+    ].filter(Boolean).join('  \n');
+
+    return `${header}\n\n${removeDuplicateTitle(content, title)}`;
+}
+
 export function generateStaticParams() {
     return Object.entries(COLLECTIONS).flatMap(([slug, config]) =>
         getCollectionItems(config.directory).map((entry) => ({
@@ -87,7 +112,7 @@ export default async function CollectionItemPage({ params }: { params: Promise<{
                     </header>
                     <SkillBodyPanel
                         config={pageConfig}
-                        content={removeDuplicateTitle(entry.content, entry.title)}
+                        content={skillMarkdownContent(entry.content, entry.rawContent, entry.title)}
                         rawContent={entry.rawContent}
                     />
                 </article>

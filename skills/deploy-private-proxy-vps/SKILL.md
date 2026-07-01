@@ -3,7 +3,7 @@ name: deploy-private-proxy-vps
 description: Set up a stable and reliable private proxy tool on a VPS using current official documentation, safe credential handling, and end-to-end validation.
 ---
 
-# Deploy a Private Proxy VPS
+# deploy-private-proxy-vps
 
 Use only on infrastructure the user owns or administers. Treat every IP, password, UUID, key, token, URL, and QR code as secret. Never place real secrets in skill files, logs, examples, third-party converters, or final answers unless necessary for delivery. Rotate any credential exposed in chat.
 

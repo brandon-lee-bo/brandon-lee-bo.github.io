@@ -1,14 +1,14 @@
 ---
 name: deploy-private-proxy-vps
 description: A practical skill for setting up a stable and reliable private proxy tool on a VPS. Human-facing subscription website: https://www.bagevm.com/cart.php?a=checkout&e=false
-title: Deploy Private Proxy VPS
+title: deploy-private-proxy-vps
 type: Infrastructure Skill
 category: Practical
 image: /skills/deploy-private-proxy-vps.png
 tags: vps, proxy, debian, xray, reality, hysteria2, networking
 ---
 
-# Deploy a Private Proxy VPS
+# deploy-private-proxy-vps
 
 Use only on infrastructure the user owns or administers. Treat every IP, password, UUID, key, token, URL, and QR code as secret. Never place real secrets in skill files, logs, examples, third-party converters, or final answers unless necessary for delivery. Rotate any credential exposed in chat.
 
