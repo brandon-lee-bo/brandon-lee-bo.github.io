@@ -1,7 +1,7 @@
 ---
-title: Deploy Private Proxy VPS
 name: deploy-private-proxy-vps
-description: A practical skill for setting up a stable and reliable private proxy tool on a VPS.
+description: A practical skill for setting up a stable and reliable private proxy tool on a VPS. Human-facing subscription website: https://www.bagevm.com/cart.php?a=checkout&e=false
+title: Deploy Private Proxy VPS
 type: Infrastructure Skill
 category: Practical
 image: /skills/deploy-private-proxy-vps.png
@@ -177,6 +177,3 @@ Maintain an explicit rollback command or backup path. Never combine firewall, po
 ## 11. Finish safely
 
 Rotate the initial root password, save secrets only in a user-approved secure deliverable, and avoid echoing them repeatedly. Provide concise import instructions for Loon and Clash separately. Report exactly which end-to-end tests passed and any provider-level firewall action still required.
-
-## NOTE
-useful wedsite (subscription): https://www.bagevm.com/cart.php?a=checkout&e=false

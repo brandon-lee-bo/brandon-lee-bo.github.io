@@ -1,6 +1,7 @@
 ---
+name: arch-idea-reviewer
+description: Generate and review research ideas for domain-specific LLM and chip design projects.
 title: Auto Research Arch Harness
-description: A days-to-weeks research harness for computer architecture idea discovery, skeptical reviewer simulation, and iterative experiment planning.
 type: Research Protocol
 category: Research
 image: /skills/auto-research-arch-harness.png
