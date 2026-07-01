@@ -1,3 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32">
-  <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-size="80">💪</text>
-</svg> 
+  <rect width="100" height="100" rx="22" fill="#f8fafc"/>
+  <path d="M17 70c9 6 20 9 33 9s24-3 33-9c-5 13-16 21-33 21S22 83 17 70Z" fill="#1e293b"/>
+  <path d="M50 12v58" stroke="#1e293b" stroke-width="5" stroke-linecap="round"/>
+  <path d="M54 18c15 10 24 24 26 43H54V18Z" fill="#d4a562"/>
+  <path d="M46 25C34 35 27 47 24 61h22V25Z" fill="#38bdf8"/>
+  <path d="M22 66h56" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+</svg>
