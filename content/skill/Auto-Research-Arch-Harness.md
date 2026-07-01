@@ -236,8 +236,9 @@ Output:
 
 Venue rule:
 
-- Prefer ISCA, MICRO, HPCA, ASPLOS, and other top architecture/systems venues when they directly cover the mechanism.
-- Adjacent venues, arXiv papers, workshop papers, company reports, and technical blogs may be used as supporting context.
+- Use the four major computer architecture venues as the primary literature base: ISCA, MICRO, HPCA, and ASPLOS.
+- Adjacent architecture/systems venues, arXiv papers, workshop papers, company reports, and technical blogs may be used as supporting context.
+- When spawning subagents, assign at least one AI-method subagent to search NeurIPS, ICML, ICLR, and closely related AI venues for fine-tuned LLMs, algorithms, reinforcement learning methods, representation learning, or agentic workflows that could be adapted to architecture mechanisms.
 - Any non-primary source must be marked as supporting evidence unless no primary counterpart exists.
 
 Citation and evidence rule:
@@ -400,8 +401,9 @@ Recommended roles:
    - identifies the strongest existing mechanisms and required baselines.
 2. Domain mechanism specialist
    - extracts architecture mechanisms from relevant papers.
-3. Learning or semantic-hint specialist
-   - evaluates whether learning, semantic labels, or LLM assistance is necessary.
+3. AI-method and semantic-hint specialist
+   - searches top AI venues for transferable methods such as fine-tuned LLMs, reinforcement learning, representation learning, or agentic workflows.
+   - evaluates whether learning, semantic labels, or LLM assistance is necessary for the architecture mechanism.
 4. Local artifact auditor
    - reads project reports, logs, scripts, and CSVs only.
 5. Skeptical reviewer
