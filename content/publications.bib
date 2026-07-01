@@ -7,9 +7,9 @@
   month        = {jan},
   institution  = {South China University of Technology, Guangzhou, China},
   abstract = {Graph Convolutional Networks (GCNs) are widely adopted for tasks involving relational or graph-structured data and can be formulated as two-stage sparse–dense matrix multiplication (SpMM) during inference. However, existing accelerators often struggle with the irregular workloads induced by power-law node degree distributions. In this work, we propose FlexVector, a vector-processor-based architecture that efficiently accelerates SpMM for GCN inference. To address irregular computation patterns, FlexVector adopts a row-wise, product-based dataflow that regularizes SpMM execution and exposes vector parallelism through full-row access to vector registers, eliminating the need for multi-banked register file designs. Building on this dataflow, FlexVector incorporates software-managed, flexible vector register files (VRFs) that adapt to irregular data access patterns, along with a coarse-grained instruction set architecture (ISA) that aggregates multiple fine-grained SpMM operations into a single instruction. This design significantly reduces instruction decoding overhead and simplifies ISA scheduling. Combined with graphaware preprocessing and node partitioning, FlexVector achieves high computational utilization and reduced memory traffic, resulting in significant performance and energy efficiency improvements on real-world GCN workloads.},
+  pdfUrl      = {https://arxiv.org/pdf/2604.10113},
   preview     = {flexvector-preview.png},
   description={FlexVector is a domain-specific vector processor that accelerates SpMM for GCN inference on power-law graphs via a software-managed flexible VRF, row-wise product dataflow, and coarse-grained ISA, achieving high utilization and reduced memory traffic under varying sparsity.},
   keywords={Graph Convolutional Networks, Sparse-dense Matrix Multiplication, Vector Processor, Row-wise product dataflow}
 }
-
 

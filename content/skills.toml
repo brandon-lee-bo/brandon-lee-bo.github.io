@@ -3,7 +3,7 @@ title = "Skill Group"
 description = "Reusable skills grouped by research workflows, agent operations, and practical tooling."
 install_guide = """
 GitHub skill directory:
-https://github.com/brandon-lee-bo/brandon-lee-bo.github.io/tree/source/skills/arch-idea-reviewer
+https://github.com/brandon-lee-bo/brandon-lee-bo.github.io/tree/source/skills
 
 Install in Codex CLI:
 $skill-installer install https://github.com/brandon-lee-bo/brandon-lee-bo.github.io/tree/source/skills/arch-idea-reviewer

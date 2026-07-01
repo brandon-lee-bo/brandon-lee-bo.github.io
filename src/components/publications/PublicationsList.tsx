@@ -196,7 +196,7 @@ export default function PublicationsList({ config, publications, embedded = fals
                             transition={{ duration: 0.4, delay: 0.1 * index }}
                             className="bg-white dark:bg-neutral-900 p-5 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-800 hover:shadow-md transition-all duration-200"
                         >
-                            <div className={cn("grid gap-5", pub.preview ? "lg:grid-cols-[minmax(0,1fr)_340px]" : "")}>
+                            <div className={cn("grid gap-5", pub.preview ? "lg:grid-cols-[minmax(0,1fr)_460px] xl:grid-cols-[minmax(0,1fr)_520px]" : "")}>
                                 <div className="min-w-0">
                                     <h3 className={`${embedded ? "text-lg" : "text-xl"} font-semibold text-primary mb-2 leading-tight`}>
                                         {pub.title}
@@ -225,6 +225,17 @@ export default function PublicationsList({ config, publications, embedded = fals
                                     )}
 
                                     <div className="flex flex-wrap gap-2 mt-auto">
+                                        {pub.pdfUrl && (
+                                            <a
+                                                href={pub.pdfUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors"
+                                            >
+                                                <DocumentTextIcon className="h-3 w-3 mr-1.5" />
+                                                PDF
+                                            </a>
+                                        )}
                                         {pub.doi && (
                                             <a
                                                 href={`https://doi.org/${pub.doi}`}
@@ -320,13 +331,13 @@ export default function PublicationsList({ config, publications, embedded = fals
                                 </div>
                                 {pub.preview && (
                                     <div className="lg:order-last">
-                                        <div className="relative aspect-[16/9] overflow-hidden rounded-lg border border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950">
+                                        <div className="relative aspect-[2.25/1] overflow-hidden rounded-lg border border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950">
                                             <Image
                                                 src={`/papers/${pub.preview}`}
                                                 alt={pub.title}
                                                 fill
-                                                className="object-contain p-2"
-                                                sizes="(max-width: 1024px) 100vw, 340px"
+                                                className="object-contain p-1"
+                                                sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 460px, 520px"
                                             />
                                         </div>
                                     </div>
