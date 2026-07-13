@@ -57,6 +57,12 @@ target = "skills"
 href = "/skills"
 
 [[navigation]]
+title = "Prompt"
+type = "page"
+target = "prompts"
+href = "/prompts"
+
+[[navigation]]
 title = "Blog"
 type = "page"
 target = "blog"

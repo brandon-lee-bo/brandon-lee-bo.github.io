@@ -184,6 +184,31 @@ Rules:
 - Each Markdown file becomes a card and a detail page at `/blog/<slug>/`.
 - Blog posts may be more personal, but should still avoid secrets and private credentials.
 
+## Prompt Rules
+
+Prompt entries live under `content/prompt/*.md` and are collected at `/prompts/`.
+
+Each prompt should use YAML frontmatter:
+
+```yaml
+---
+title: lowercase-hyphenated-prompt-name
+description: One concise sentence explaining the prompt's purpose.
+type: Prompt Template
+category: Academic Writing
+tags: paper-revision, technical-writing
+---
+```
+
+Rules:
+
+- `/prompts/` is a collection page, and every Markdown file becomes a card and a detail page.
+- Keep prompts generic and reusable. Replace private names, venues, paths, and project details with clear placeholders such as `[XXX]`.
+- The detail page introduces the prompt before showing a collapsed panel with `Expand Full Prompt` and `Copy Prompt` controls.
+- Copied prompt content must contain only the reusable Markdown prompt body, without website frontmatter or a duplicate title.
+- Prompts are not installable Codex skills. Do not add them under `skills/` unless the user explicitly asks to create a skill too.
+- Do not include secrets, unpublished results, private comments, credentials, or machine-specific data.
+
 ## Image Rules
 
 For project-bound generated images:

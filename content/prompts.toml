@@ -1,0 +1,5 @@
+type = "collection"
+title = "Prompt"
+description = "Reusable prompts for research writing, paper revision, and other focused workflows."
+directory = "prompt"
+basePath = "/prompts"

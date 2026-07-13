@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import TextPage from '@/components/pages/TextPage';
 import SkillBodyPanel from '@/components/pages/SkillBodyPanel';
+import PromptBodyPanel from '@/components/pages/PromptBodyPanel';
 import { getCollectionItem, getCollectionItems } from '@/lib/content';
 import { TextPageConfig } from '@/types/page';
 
@@ -11,6 +12,11 @@ const COLLECTIONS = {
         directory: 'skill',
         title: 'Skills',
         basePath: '/skills',
+    },
+    prompts: {
+        directory: 'prompt',
+        title: 'Prompt',
+        basePath: '/prompts',
     },
     blog: {
         directory: 'blog',
@@ -96,7 +102,7 @@ export default async function CollectionItemPage({ params }: { params: Promise<{
                     Back to {config.title}
                 </Link>
             </div>
-            {slug === 'skills' ? (
+            {slug === 'skills' || slug === 'prompts' ? (
                 <article>
                     <header className="mb-6">
                         <h1 className="mb-3 font-serif text-4xl font-bold text-primary">{entry.title}</h1>
@@ -106,13 +112,21 @@ export default async function CollectionItemPage({ params }: { params: Promise<{
                             </p>
                         )}
                     </header>
-                    <SkillBodyPanel
-                        config={pageConfig}
-                        content={removeDuplicateTitle(entry.content, entry.title)}
-                        rawContent={officialSkillContent(entry.content, entry.rawContent, entry.title)}
-                        skillName={frontmatterValue(entry.rawContent, 'name') || entry.title}
-                        skillDescription={frontmatterValue(entry.rawContent, 'description')}
-                    />
+                    {slug === 'skills' ? (
+                        <SkillBodyPanel
+                            config={pageConfig}
+                            content={removeDuplicateTitle(entry.content, entry.title)}
+                            rawContent={officialSkillContent(entry.content, entry.rawContent, entry.title)}
+                            skillName={frontmatterValue(entry.rawContent, 'name') || entry.title}
+                            skillDescription={frontmatterValue(entry.rawContent, 'description')}
+                        />
+                    ) : (
+                        <PromptBodyPanel
+                            config={pageConfig}
+                            content={removeDuplicateTitle(entry.content, entry.title)}
+                            rawContent={removeDuplicateTitle(entry.content, entry.title)}
+                        />
+                    )}
                 </article>
             ) : (
                 <TextPage config={pageConfig} content={removeDuplicateTitle(entry.content, entry.title)} />
