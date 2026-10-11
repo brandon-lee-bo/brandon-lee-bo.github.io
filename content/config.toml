@@ -2,7 +2,7 @@
 title = "Bohan Li"
 description = "Undergraduate student at the South China University of Technology."
 favicon = "/favicon.svg"
-last_updated = "November 18, 2025"
+last_updated = "October 11, 2026"
 
 [author]
 name = "Bohan Li"
@@ -13,7 +13,7 @@ avatar = "/bio.jpg"
 [social]
 # Contact information (leave blank or delete to hide)
 
-email = "leebrandon@163.com"
+email = "milbh_brandon@mail.scut.edu.cn"
 location = "Guangzhou, China"
 location_url = "https://maps.app.goo.gl/BitDBmrk991FQPx16"
 location_details = [

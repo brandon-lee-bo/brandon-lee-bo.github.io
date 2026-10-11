@@ -1,61 +1,72 @@
 # Bohan Li
 
 Tel: +86 15975558614  
-Email: [leebrandon@163.com](mailto:leebrandon@163.com)  
+Email: [milbh_brandon@mail.scut.edu.cn](mailto:milbh_brandon@mail.scut.edu.cn)  
 Website: [brandon-lee-bo.github.io](https://brandon-lee-bo.github.io/)
 
 ## Education
 
-**South China University of Technology (SCUT)**, Guangzhou, China  
-*Sept. 2023 -- Present*
+**South China University of Technology**, Guangzhou, China  
+*Sept. 2023 -- July 2027*
 
 B.Eng. in Microelectronics Science and Engineering  
-GPA: 3.86/4; Ranking: 9%  
+GPA: 3.81/4.00  
 Relevant Courses: Digital Electronic Circuits, Analog Electronic Circuits, Signals and Systems, Calculus, C++
+
+**Hong Kong University of Science and Technology**  
+*Aug. 2026 -- Present*
+
+Exchange Student, Hong Kong  
+Current coursework: Architecture for AI Systems, Computer Organization & Design, Generative AI.
 
 ## Research Interests
 
-Hardware-Software Co-Design; LLM for Architecture; Domain-Specific Architectures
+HW-SW Co-Design for AI/Agents, CPU/GPU Microarchitecture, Heterogeneous Computing.
 
-## Publication
+## Publications and Manuscripts
 
-**Bohan Li** (equal contribution), Shengmin Li (equal contribution), Xinyu Shi, Enyi Yao, Francky Catthoor, Simei Yang. **FlexVector: A SpMM Vector Processor with Flexible VRF for GCNs on Varying-Sparsity Graphs.** *IEEE Transactions on Computers* (Under Review). Preprint: [https://arxiv.org/abs/2604.10113](https://arxiv.org/abs/2604.10113)
+(† Equal contribution, * Corresponding author)
+
+1. **Bohan Li**†, Shengmin Li†, Xinyu Shi, Enyi Yao, Francky Catthoor, Simei Yang*. FlexVector: A SpMM Vector Accelerator with Flexible VRF for GCNs on Varying-Sparsity Graphs. *IEEE Transactions on Computers* (IF: 4.9, Accepted). Preprint: [arXiv:2604.10113](https://arxiv.org/abs/2604.10113)
+2. **Bohan Li**†, Xiangfeng Sun†, Ceyu Xu, Yuan Xie*. Not All Reuse Is Worth Keeping: Context-Aware Prefetch Retention for Shared Caches. *HPCA 2027* (under rebuttal).
 
 ## Research Experience
 
-### Vector Processor Accelerator for GCN Acceleration
+### Shared-Cache Management: KEEPER
 
-**South China University of Technology, advised by Prof. Simei Yang**  
-*Jul. 2024 -- Apr. 2026*
+**Research Intern, Hong Kong University of Science and Technology, supervised by Prof. Yuan Xie**  
+*Apr. 2026 -- July 2026*
 
-- Proposed **FlexVector**, a vector-processor-based SpMM accelerator for GCN inference, featuring a **flexible VRF** with fixed and dynamic regions to eliminate costly DRAM traffic caused by power-law graph irregularity, in collaboration with Prof. Francky Catthoor (IEEE Fellow).
-- Co-designed a **hybrid graph preprocessing strategy** (inter-tile edge-cut + intra-tile vertex-cut) and hierarchical dataflow (row-wise product at buffer-VRF level; inner-product at DRAM-buffer level), bridging software-level graph partitioning with hardware lane utilization.
-- Achieved **3.78x speedup** and **40.5% lower energy** versus a state-of-the-art cache-centric baseline at comparable area cost, evaluated on five real-world GCN datasets.
+- Worked on KEEPER, a shared-LLC prefetch-retention policy combining per-fill reuse qualification with epoch-level source-core selection based on prefetch service and retirement blocking. Cross-core decisions remain off the LLC fill path.
+- Implemented policies and baselines in ChampSim, ran 4-, 8-, and 16-core experiments, and assessed hardware feasibility through RTL synthesis. Drafted the manuscript and refined its argument with collaborators.
+- Improved geometric-mean weighted speedup by **3.20%** over Mockingjay and **1.56%** over CARE across 80 heterogeneous four-core mixes, while preserving original priority for only 9.33% of admitted prefetch fills.
 
-### Intelligent Oscillator Circuit for Micro-Nano Robots
+### FlexVector: GCN Accelerator Design
 
-**Westlake University, Summer Research Internship, advised by Prof. Wei Wang**  
-*Jul. 2025 -- Aug. 2025*
+**South China University of Technology, supervised by Prof. Simei Yang**  
+*July 2024 -- Apr. 2026*
 
-- Identified limitations of existing micro-nano robot circuit designs, including area and oscillation frequency.
-- Designed an **intelligent oscillator circuit** with externally controllable frequency and amplitude to improve motion efficiency of micro-nano robots, contributing a novel methodology for robot control.
+- Designed a vector-based SpMM accelerator for GCN inference, using fixed and dynamic VRF regions to support irregular graph workloads. Combined inter-tile edge cutting and intra-tile vertex cutting with a hierarchical dataflow to reduce memory traffic.
+- Led experiments and manuscript writing and revision. Used RTL and simulation to evaluate power, performance, and area, including the effects of graph preprocessing and storage organization.
+- Evaluation on five real-world GCN datasets shows **3.78x speedup** and **40.5% lower energy** than a cache-centric baseline at comparable area and equal buffer capacity.
 
-### High-Speed Multi-Port Shared Cache Management Module
+### Frequency-Control Circuits for Microrobots
 
-**South China University of Technology**  
-*Sept. 2024 -- Nov. 2024*
+**Summer Research Intern, Westlake University, supervised by Prof. Wei Wang**  
+*July -- Aug. 2025*
 
-- Participated in the National College Student Embedded Chip & System Design Competition and the National College Student IC Innovation & Entrepreneurship Competition based on the **Vivado** development flow.
-- Responsible for implementing a data verification module supporting **ECC** and **CRC**, ensuring data transmission.
+- Learned analog IC design using Cadence Virtuoso. Designed and simulated a voltage-controlled ring oscillator, frequency dividers, and phase shifters for microrobot locomotion modes.
+- Received the program's **Best Poster Award** for presenting the circuit design and its frequency, phase, power, and area tradeoffs.
 
 ## Awards & Honors
 
-- **Best Poster Award**, Summer Research Program, Westlake University (2025)
-- **National First & Third Prize**, National College FPGA Innovation Design Competition (2024, 2025)
-- **National Third Prize & South China First Prize**, National College IC Innovation Competition (2024)
+- **Best Poster Award**, Westlake University Summer Research Program (2025)
+- **National First / Third Prize**, College Student Chip and System Design Competition (2024 / 2025)
+- **National Third / South China First Prize**, College IC Innovation Competition (2024)
 - **Second-Class Scholarship**, South China University of Technology (2024, 2025)
 
 ## Skills
 
-- **Technical:** Codex, Claude Code, GitHub, Verilog, Python, LaTeX, Synopsys Design Compiler, Vivado, CACTI
+- **Programming and workflow:** Verilog, Python, GitHub, LaTeX
+- **Architecture & circuit tools:** ChampSim, CACTI, Synopsys Design Compiler, Vivado, Cadence Virtuoso
 - **Languages:** Mandarin Chinese (native), English (IELTS 6.5)

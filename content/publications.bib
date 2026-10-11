@@ -1,15 +1,29 @@
-@unpublished{li2026flexvector,
+@article{li2026flexvector,
   selected     = {true},
   author       = {Bohan Li# and Shengmin Li# and Xinyu Shi and Enyi Yao and Francky Catthoor and Simei Yang*},
-  title        = {FlexVector: A SpMM Vector Processor with Flexible VRF for GCNs on Varying-Sparsity Graphs},
-  note         = {Manuscript in preparation / In preparation for IEEE Transactions on Computers},
+  title        = {FlexVector: A SpMM Vector Accelerator with Flexible VRF for GCNs on Varying-Sparsity Graphs},
+  journal      = {IEEE Transactions on Computers},
   year         = {2026},
-  month        = {jan},
+  month        = {oct},
+  note         = {Accepted},
   institution  = {South China University of Technology, Guangzhou, China},
   abstract = {Graph Convolutional Networks (GCNs) are widely adopted for tasks involving relational or graph-structured data and can be formulated as two-stage sparse–dense matrix multiplication (SpMM) during inference. However, existing accelerators often struggle with the irregular workloads induced by power-law node degree distributions. In this work, we propose FlexVector, a vector-processor-based architecture that efficiently accelerates SpMM for GCN inference. To address irregular computation patterns, FlexVector adopts a row-wise, product-based dataflow that regularizes SpMM execution and exposes vector parallelism through full-row access to vector registers, eliminating the need for multi-banked register file designs. Building on this dataflow, FlexVector incorporates software-managed, flexible vector register files (VRFs) that adapt to irregular data access patterns, along with a coarse-grained instruction set architecture (ISA) that aggregates multiple fine-grained SpMM operations into a single instruction. This design significantly reduces instruction decoding overhead and simplifies ISA scheduling. Combined with graphaware preprocessing and node partitioning, FlexVector achieves high computational utilization and reduced memory traffic, resulting in significant performance and energy efficiency improvements on real-world GCN workloads.},
   pdfUrl      = {https://arxiv.org/pdf/2604.10113},
   preview     = {flexvector-preview.png},
   description={FlexVector is a domain-specific vector processor that accelerates SpMM for GCN inference on power-law graphs via a software-managed flexible VRF, row-wise product dataflow, and coarse-grained ISA, achieving high utilization and reduced memory traffic under varying sparsity.},
-  keywords={Graph Convolutional Networks, Sparse-dense Matrix Multiplication, Vector Processor, Row-wise product dataflow}
+  keywords={Graph Convolutional Networks, Sparse-dense Matrix Multiplication, Vector Accelerator, Row-wise product dataflow}
 }
 
+@unpublished{li2026keeper,
+  selected     = {true},
+  author       = {Bohan Li# and Xiangfeng Sun# and Ceyu Xu and Yuan Xie*},
+  title        = {Not All Reuse Is Worth Keeping: Context-Aware Prefetch Retention for Shared Caches},
+  booktitle    = {HPCA 2027},
+  year         = {2026},
+  month        = {aug},
+  note         = {Under rebuttal},
+  institution  = {Hong Kong University of Science and Technology},
+  abstract = {A decade of work on last-level cache (LLC) replacement has made one question answerable with remarkable accuracy: will this line be reused? We argue that in a shared multicore LLC this is no longer the decision that matters most. When several cores simultaneously produce lines that are all genuinely reusable, knowing that each will be reused says nothing about which core should win the scarce capacity they contend for. Our key insight is that the value of retaining a useful prefetch is not only a property of the line, but of the core it serves at that moment. A reusable prefetch buys little when its source core can hide memory latency, but can be more valuable when loads waiting for memory have frequently blocked retirement on that core. Line-level reuse and core-level urgency are therefore separate questions, answered at different granularities and different timescales: reuse must be judged at every fill, but a core's urgency changes slowly enough to be summarized over execution epochs. We build KEEPER on this separation. It leaves a strong reuse predictor untouched and adds a lightweight controller that runs off the cache access path, watching each core's prefetch usefulness and exposed memory stalls over rolling windows to decide which cores currently deserve retention priority. Only a fill that is both reuse-qualified and sourced by a selected core keeps its priority. All others step aside. This coordination touches neither prefetch generation, demand handling, nor victim selection. Yet under the default configuration, across 80 heterogeneous four-core SPEC mixes, it improves weighted speedup by 3.20\% over the reuse predictor it extends and outperforms the best prior context-aware policy, while granting retention exceptions to fewer than one in ten admitted prefetch fills.},
+  description={KEEPER is a shared-LLC prefetch-retention policy that separates per-fill reuse qualification from epoch-level source-core selection: a prefetch keeps its reuse-derived priority only when its line is reuse-qualified and its source core currently shows both high prefetch service and frequent retirement blocking. Under rebuttal at HPCA 2027.},
+  keywords={Shared Cache, Prefetch Retention, Cache Replacement, Multicore}
+}
