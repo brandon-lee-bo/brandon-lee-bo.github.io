@@ -21,7 +21,7 @@ Current coursework: Architecture for AI Systems, Computer Organization & Design,
 
 ## Research Interests
 
-HW-SW Co-Design for AI/Agents, CPU/GPU Microarchitecture, Heterogeneous Computing.
+Power & Performance Modeling, CPU Microarchitecture, Hardware-Software Co-design for AI.
 
 ## Publications and Manuscripts
 

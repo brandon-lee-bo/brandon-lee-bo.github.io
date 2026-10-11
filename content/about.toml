@@ -3,9 +3,9 @@ title = "About"
 
 [profile]
 research_interests = [
-  "Hardware-Software Co-Design",
-  "Efficient AI Hardware & Accelerators",
-  "AI for Architecture"
+  "Power & Performance Modeling",
+  "CPU Microarchitecture",
+  "Hardware-Software Co-design for AI"
 ]
 
 [[sections]]
