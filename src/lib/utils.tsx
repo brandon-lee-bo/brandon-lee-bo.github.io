@@ -25,3 +25,11 @@ export function generateSlug(text: string): string {
     .replace(/[\s_-]+/g, '-')
     .replace(/^-+|-+$/g, '');
 }
+
+export function renderTextWithLinks(text: string) {
+  return text.split(/(https?:\/\/[^\s)]+)/g).map((part, i) =>
+    /^https?:\/\//.test(part)
+      ? <a key={i} href={part} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-4 break-all">{part}</a>
+      : <span key={i}>{part}</span>
+  );
+}

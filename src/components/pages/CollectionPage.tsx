@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { CollectionItem, CollectionPageConfig } from '@/types/page';
+import { renderTextWithLinks } from '@/lib/utils';
 
 function groupedItems(items: CollectionItem[]): Array<[string, CollectionItem[]]> {
     const groups = new Map<string, CollectionItem[]>();
@@ -82,7 +83,7 @@ export default function CollectionPage({ config, items }: { config: CollectionPa
                 <h1 className="text-4xl font-serif font-bold text-primary mb-4">{config.title}</h1>
                 {config.description && (
                     <p className="text-lg text-neutral-600 dark:text-neutral-500 max-w-2xl">
-                        {config.description}
+                        {renderTextWithLinks(config.description)}
                     </p>
                 )}
             </div>

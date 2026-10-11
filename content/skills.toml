@@ -1,6 +1,6 @@
 type = "collection"
 title = "Skill Group"
-description = "Reusable skills grouped by research workflows, agent operations, and practical tooling."
+description = "Reusable skills grouped by research workflows, agent operations, and practical tooling. My FACT Lab workflow skills are maintained in the FACT-Lab-skills repository: https://github.com/brandon-lee-bo/FACT-Lab-skills"
 install_guide = """
 GitHub skill directory:
 https://github.com/brandon-lee-bo/brandon-lee-bo.github.io/tree/source/skills

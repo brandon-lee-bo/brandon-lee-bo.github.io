@@ -16,6 +16,7 @@ export interface Publication {
   abstract?: string;
   journal?: string;
   conference?: string;
+  statusNote?: string;
   volume?: string;
   issue?: string;
   pages?: string;

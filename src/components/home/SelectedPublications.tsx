@@ -53,7 +53,8 @@ export default function SelectedPublications({ publications, title = 'Selected P
                             ))}
                         </p>
                         <p className="text-sm text-neutral-600 dark:text-neutral-500 mb-2">
-                            {pub.journal || pub.conference}
+                            <strong className="font-semibold text-neutral-800 dark:text-neutral-200">{pub.journal || pub.conference}</strong>
+                            {pub.statusNote && (<> (<strong className="font-semibold text-neutral-800 dark:text-neutral-200">{pub.statusNote}</strong>)</>)}
                         </p>
                         {pub.description && (
                             <p className="text-sm text-neutral-500 dark:text-neutral-500 line-clamp-2">
