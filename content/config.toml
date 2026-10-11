@@ -28,6 +28,7 @@ linkedin = "https://www.linkedin.com/in/bohan-li-548354387/"
 [features]
 # Show a like button on the about page
 enable_likes = false
+clustrmaps_id = ""
 
 # Display all subpages on a single page
 enable_one_page_mode = false

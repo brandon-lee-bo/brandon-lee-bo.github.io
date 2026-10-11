@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Script from 'next/script';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import {
@@ -348,6 +349,20 @@ export default function Profile({ author, social, features, researchInterests }:
                                 </motion.div>
                             )}
                         </AnimatePresence>
+                    </div>
+                </div>
+            )}
+
+            {/* Visitor Map */}
+            {features.clustrmaps_id && (
+                <div className="bg-neutral-100 dark:bg-neutral-800 rounded-lg p-4 mb-6 hover:shadow-lg transition-all duration-200">
+                    <h3 className="font-semibold text-primary mb-3 text-center">Visitor Map</h3>
+                    <div className="flex justify-center">
+                        <Script
+                            id="clstmpl"
+                            src={`//cdn.clustrmaps.com/map_v2.js?u=${features.clustrmaps_id}`}
+                            strategy="lazyOnload"
+                        />
                     </div>
                 </div>
             )}
